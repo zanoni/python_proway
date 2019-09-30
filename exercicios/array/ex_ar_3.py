@@ -1,0 +1,32 @@
+'''
+
+n = [4, 7, 2, 3]
+maior =0
+for i in range(len(n)):
+    if n[i]> maior:
+        maior = n[i]
+
+print(maior)
+
+'''
+
+#entrada
+qtd_pos = int(input('Quantidade de posições: '))
+q = []
+num_maior = 0
+
+#processamento
+while len(q) < qtd_pos:
+    num = float(input('Número: '))
+    if num >= 0:
+        q.append(num)
+    else:
+        print('O número tem que ser positivo')
+    
+for i in range(len(q)):
+    if q[i] > num_maior:
+        num_maior = q[i]
+
+#saida
+
+print('O maior número é {} e está na posição {}' .format(num_maior, q.index(num_maior)))
